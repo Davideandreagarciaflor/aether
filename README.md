@@ -1,2 +1,0 @@
-# aether
-School-Project
