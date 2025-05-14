@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aether - Login / Registrazione</title>
+  <link rel="stylesheet" href="auth.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="logo22.png" alt="Logo Aether">
+      </div>
+
+      <!-- TITOLO -->
+      <h2 id="formTitle">Accedi</h2>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="form active">
+        <input type="text" id="loginEmail" placeholder="Email o Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <div class="form-options">
+          <label><input type="checkbox"> Ricordami</label>
+          <a href="#">Password dimenticata?</a>
+        </div>
+        <button type="submit">Accedi</button>
+        <p class="toggle-text">Non hai un account? <a href="#" id="showRegister">Registrati</a></p>
+        <div id="loginMessage" class="message"></div>
+      </form>
+
+      <!-- REGISTRAZIONE FORM -->
+      <form id="registerForm" class="form">
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <input type="password" id="registerPassword2" placeholder="Conferma Password" required>
+        <button type="submit">Registrati</button>
+        <p class="toggle-text">Hai già un account? <a href="#" id="showLogin">Accedi</a></p>
+        <div id="registerMessage" class="message"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

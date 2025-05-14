@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aether - Home</title>
+  <link rel="stylesheet" href="aether.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4xg5c7e1z5e5f5e5f5e5f5e5f5e5f5e" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Leaflet CSS per la mappa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <header>
+    <!-- Top-header: background con immagine (src vuoto) -->
+    <div class="top-header">
+      <div class="container">
+        <div class="logo">
+          <img src="logo22.png" alt="Logo" class="animated-logo">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom-header: navbar + bottoni di autenticazione -->
+    <div class="bottom-header">
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Servizi</a></li>
+            <li><a href="#location" class="nav-link">Dove Siamo</a></li>
+            <li><a href="#booking" class="nav-link">Prenotazioni</a></li>
+            <li><a href="render.html" class="nav-link">Visualizzazione</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <a href="auth.html" class="btn auth-btn login-btn">Accedi</a>
+          <a href="auth.html" class="btn auth-btn register-btn">Registrati</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sezione Hero -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1>Benvenuti su Aether</h1>
+        <p>
+          Il tuo spazio di lettura e relax sui tetti della Galleria Vittorio Emanuele II a Milano.
+        </p>
+        <a href="#services" class="btn hero-btn">Scopri di più</a>
+      </div>
+    </section>
+
+    <!-- Sezione About -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>Il Nostro Progetto</h2>
+        <p>
+          L’idea alla base di Aether è trasformare le terrazze Highline della Galleria Vittorio Emanuele II di Milano in spazi dedicati alla lettura e al relax.  
+          In una città dal ritmo frenetico, offriamo un’oasi culturale sospesa tra il passato e il presente.
+        </p>
+        <h3>Storia e Innovazione</h3>
+        <p>
+          La Galleria, costruita tra il 1865 e il 1877, è un simbolo di eleganza e innovazione. Con l’Highline diventa possibile godere di una vista inedita sulla città e riscoprire il fascino storico.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sezione Servizi -->
+    <section id="services" class="features-section">
+      <h2>I Nostri Servizi</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <i class="fas fa-rocket"></i>
+          <h3>Innovazione</h3>
+          <p>
+            Soluzioni all'avanguardia e tecnologie sostenibili per un relax moderno.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-users"></i>
+          <h3>Team Esperto</h3>
+          <p>
+            Professionisti appassionati di lettura, design e cultura.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Affidabilità</h3>
+          <p>
+            Sicurezza e qualità garantite in ogni aspetto del progetto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione Location (mappa interattiva) -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <h2>Dove Siamo</h2>
+        <p>
+          Le terrazze Highline della Galleria Vittorio Emanuele II, Milano.<br>
+          Goditi una vista mozzafiato a due passi dal Duomo.
+        </p>
+        <div id="map"></div>
+      </div>
+    </section>
+
+    <!-- Sezione Prenotazioni -->
+    <section id="booking" class="booking-section">
+      <div class="container">
+        <h2>Prenota il tuo Posto</h2>
+        <p>
+          Scegli l’area tematica che preferisci e riserva la tua esperienza di lettura.<br>
+          <em>Vivi Milano dall’alto come non l’hai mai vista prima!</em>
+        </p>
+        <div class="booking-wrapper">
+          <div class="booking-image">
+            <img src="HIGHLINE-Nocturnal-View.webp" alt="Terrace Reading">
+          </div>
+          <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="La tua email" required>
+            </div>
+            <div class="form-group">
+              <label for="area">Seleziona l'area</label>
+              <select id="area" name="area" required>
+                <option value="">-- Seleziona l'area --</option>
+                <option value="Libreria per bambini">Libreria per bambini</option>
+                <option value="Libreria dedicata allo spazio">Libreria dedicata allo spazio (20:00-01:00)</option>
+                <option value="Libreria sulla storia di Milano">Libreria sulla storia di Milano</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Data</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+              <label for="time">Orario</label>
+              <input type="time" id="time" name="time" required>
+            </div>
+            <button type="submit" class="btn booking-btn">Prenota Ora</button>
+            <div id="bookingMessage" class="booking-message"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="index.html">
+            <img src="logo22.png" alt="Logo">
+          </a>
+          <p>Soluzioni innovative per il tuo successo.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Link Utili</h3>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Servizi</a></li>
+            <li><a href="#location">Dove Siamo</a></li>
+            <li><a href="#booking">Prenotazioni</a></li>
+            <li><a href="auth.html">Accedi</a></li>
+            <li><a href="auth.html">Registrati</a></li>
+            <li><a href="render.html">Visualizzazione</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Seguici</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Aether. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+    <div id="scrollToTop" class="scroll-to-top">↑</div>
+  </footer>
+
+  <!-- Leaflet JS per la mappa -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="aether.js"></script>
+</body>
+</html>

@@ -1,0 +1,478 @@
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fdfdfd;
+}
+
+/* ===========================
+   HEADER A DUE LIVELLI
+   =========================== */
+
+/* Top-header: Usa un'immagine come background; il src dell'elemento img è lasciato vuoto */
+.top-header {
+  background-image: url(''); /* Inserisci qui l'URL dell'immagine */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.top-header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e1d6d0;
+  max-width: 1400px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Se viene usato un elemento img all'interno di .logo, mantiene lo stile */
+.logo img {
+  height: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Bottom-header: Navbar e bottoni */
+.bottom-header {
+  background: linear-gradient(90deg, #eaccbc, #c6a999);
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bottom-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Nav-bar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #90441E;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffdd59;
+  transform: scale(1.05);
+}
+
+/* Bottoni di autenticazione */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Bottone Accedi */
+.login-btn {
+  background-color: #D9BE98;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: white;
+  color: #4e54c8;
+  transform: scale(1.05);
+}
+
+/* Bottone Registrati */
+.register-btn {
+  background-color: #D9BE98;
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+.register-btn:hover {
+  background-color: #8f94fb;
+  border-color: #ffdd59;
+  transform: scale(1.05);
+}
+
+/* Animazione Bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* ===========================
+   LE RESTANTI SEZIONI
+   =========================== */
+
+/* Sezione Hero */
+.hero-section {
+  background: linear-gradient(90deg, #e1d6d0, #d69d7e);
+  color: #90441E;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-section .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-section .hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  background-color: #90441E;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: white;
+  color: #4e54c8;
+}
+
+/* About Section */
+.about-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.about-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #90441E;
+}
+
+.about-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #90441E;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Features Section */
+.features-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #90441E;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.feature i {
+  font-size: 3rem;
+  color: #90441E;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #90441E;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Location Section */
+.location-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.location-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #90441E;
+}
+
+.location-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  border: 2px solid #90441E;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+/* Booking Section */
+.booking-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.booking-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #90441E;
+}
+
+.booking-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.booking-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.booking-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.booking-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.booking-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.booking-form label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #90441E;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.booking-btn {
+  background-color: #ffdd59;
+  color: #333;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.booking-btn:hover {
+  background-color: #e6c847;
+}
+
+.booking-message {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #C49E65;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ffdd59;
+}
+
+.footer-social .social-icons a {
+  color: white;
+  font-size: 18px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #ffdd59;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 12px;
+}
+
+/* Scroll-to-Top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4e54c8;
+  color: white;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #ffdd59;
+  transform: scale(1.1);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .top-header .container,
+  .bottom-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar ul {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  .navbar ul li {
+    margin: 8px 0;
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aether - Render</title>
+  <link rel="stylesheet" href="render.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- Top-header: logo -->
+    <div class="top-header">
+      <div class="container">
+        <div class="logo">
+          <img src="logo22.png" alt="Logo" class="animated-logo">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom-header: Navbar + Bottoni -->
+    <div class="bottom-header">
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <a href="auth.html" class="btn auth-btn login-btn">Accedi</a>
+          <a href="auth.html" class="btn auth-btn register-btn">Registrati</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- RENDER SECTION -->
+    <section class="render-section">
+      <div class="container">
+        <h2>Visualizzazione 3D</h2>
+        <p>Qua sono presenti i modelli interattivi dei nostri spazi progettati.</p>
+
+        <div class="render-grid">
+          <!-- Libreria -->
+          <div class="render-item">
+            <h3>Libreria</h3>
+            <iframe src="https://3dwarehouse.sketchup.com/embed/54c5c72a-91f3-4d7c-9b5b-036e46dfc12e?token=TgLBjz6YWcU=&binaryName=s21"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    width="100%" height="326" allowfullscreen class="render-frame"></iframe>
+          </div>
+
+          <!-- Spazio Lettura -->
+          <div class="render-item">
+            <h3>Spazio Lettura</h3>
+            <iframe src="https://3dwarehouse.sketchup.com/embed/4619eb44-2b9e-4f4e-86bc-2221b5b78cb6?token=sGdjZWBsXkE=&binaryName=s21"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    width="100%" height="326" allowfullscreen class="render-frame"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE TAVOLA -->
+    <section class="tavola-section">
+      <div class="container">
+        <h2>Tavola del Progetto</h2>
+        <p>Scarica la tavola grafica ufficiale del progetto.</p>
+        <a href="https://drive.google.com/file/d/1QnIGi-paKxxhflBGnfCxj0ymXkTNC-Xb/view?usp=sharing" target="_blank">
+          <button class="bottone-tavola">
+            <span>Scarica la Tavola</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64" fill="none" class="icon-download">
+              <circle cx="32" cy="32" r="31" stroke="#90441E" stroke-width="2" fill="#f3e7dd"/>
+              <path d="M32 16V44" stroke="#90441E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24 36L32 44L40 36" stroke="#90441E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 48H48" stroke="#90441E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="index.html">
+            <img src="logo22.png" alt="Logo">
+          </a>
+          <p>Soluzioni innovative per il tuo successo.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Link Utili</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="auth.html">Accedi</a></li>
+            <li><a href="auth.html">Registrati</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Seguici</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Aether. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="aether.js"></script>
+</body>
+</html>
